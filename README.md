@@ -19,18 +19,20 @@ This will create a new folder in the workspace called ".vscode" with a new JSON 
 
 ![config](https://user-images.githubusercontent.com/85963939/215351135-1e44a83c-ace4-45d5-8989-e088f9bb9553.png)
 
-We need to put some new things inside "configurations", so we can map de files inside the container with out files opened in Visual Code.
+We need to put some new things inside "configurations", so we can map the files inside the container with our files opened in Visual Studio Code.
 
 ![path](https://user-images.githubusercontent.com/85963939/215351335-c7773ec7-ce9b-4728-903a-c6bf2669defc.png)
 
 <ul>
   <li><b>"name:" </b>The name it will show when you execute the debug, you can change it to anything you'd like.</li>
-  <li><b>"type:" </b></li>
+  <li><b>"type:" </b>Indicates the debugging language.</li>
+  <li><b>"request:" </b>Indicates if the configuration is suppose to launch or attach.</li>
   <li><b>"port:" </b>The port that XDebug is listening. 9003 is the default.</li>
-  <li><b>"pathMappings:" </b>Here, you'll map the files of server files to your local files. You can put ${workspaceFolder} inside it, since VSCode understands locally the project files are under the current opened directory. But if doesn' works, you can put the directory the project is, for example "C:/User/Documents/Projects/docker-php-dev".
+  <li><b>"pathMappings:" </b>Here, you'll map the files from the Docker image to your local files. You can put ${workspaceFolder} inside it, since VSCode understands locally the project files are under the current opened directory. But if doesn't work, you can put the directory the project is, for example "/User/Documents/Projects/docker-php-dev".
 </ul>
  
 <h4><b>All done! Everything is set up to start your debugging. To start it, go back to "Run and debug" and execute it. </b></h4>
   
 ![debugdone](https://user-images.githubusercontent.com/85963939/215352200-71703601-8fde-4a97-8b0c-f03dd9076c39.png)
+
 
